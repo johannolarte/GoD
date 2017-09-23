@@ -1,0 +1,33 @@
+﻿<div layout="row" layout-sm="column">
+    <form name="playersForm" novalidate>
+        <p>{{vm.title}}</p>
+        <div class="form-group">
+            <label for="playerOne">{{vm.playerOneLabel}}</label>
+            <input type="text"
+                   class="form-control"
+                   id="playerOne"
+                   placeholder="Player 1 Name"
+                   ng-model="vm.playerOneName"
+                   required>
+
+        </div>
+        <div class="form-group">
+            <label for="playerTwo">{{vm.playerTwoLabel}}</label>
+            <input type="text"
+                   class="form-control"
+                   id="playerTwo"
+                   placeholder="Player 2 Name"
+                   ng-model="vm.playerTwoName"
+                   required>
+        </div>
+        <div layout="row">
+            <button class="btn btn-primary btn-lg"
+                       style="margin-top: 2em"
+                       type="submit"
+                       ng-click="vm.startGame()"
+                       ng-disabled="playersForm.$invalid">
+                Start
+            </button>
+        </div>
+    </form>
+</div>

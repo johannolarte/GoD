@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Game of Drones</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- app -->
+    <link href="content/css/site.css" rel="stylesheet" />
+
+
+</head>
+<body ng-app="app">
+    <div ui-view layout="row" style="overflow: hidden;"></div>
+
+    <!--***SCRIPTS***-->
+    <!-- vendors -->
+    <script src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="lib/angular/angular-1.5.5/angular.js"></script>
+    <script src="lib/angular/angular-1.5.5/angular-animate.min.js"></script>
+    <script src="lib/angular/angular-1.5.5/angular-aria.min.js"></script>
+    <script src="lib/angular/angular-1.5.5/angular-messages.min.js"></script>
+    <script src="lib/angular/angular-ui-router.js"></script>
+
+    <script src="lib/angular/http-auth-interceptor.js"></script>
+
+    <!-- bootstrapping -->
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.config.route.js"></script>
+    <script src="app/app.config.security.js"></script>
+
+    <!-- services -->
+    <script src="app/services/common/constants.js"></script>
+    <script src="app/services/game/gameDataSource-service.js"></script>
+
+    <!-- app -->
+    <script src="app/modules/main/index-main.js"></script>
+    <script src="app/modules/main/home.js"></script>
+
+    <script src="app/modules/game/round.js"></script>
+</body>
+</html>
