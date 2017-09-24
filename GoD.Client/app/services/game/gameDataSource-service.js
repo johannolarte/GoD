@@ -11,16 +11,12 @@
 
     function GameDataSourceService($http, $q, Constants) {
         return {
-            savePlayers: savePlayers,
+            validateMoves: validateMoves
         }
 
-        function savePlayers(players) {
-            return $http.post(Constants.API.playersUrl, players)
+        function validateMoves(moves) {
+            return $http.post(Constants.API.gamesUrl, moves)
         }
-
-        //function getPersonalInfo(identification) {
-        //    return $http.get(Constants.API.employeePersonalInfoUrl.format(identification))
-        //}
 
         //function getEmergencyContact(identification) {
         //    return $http.get(Constants.API.emergencyContactUrlDetail.format(identification))

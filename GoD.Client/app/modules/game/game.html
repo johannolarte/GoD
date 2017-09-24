@@ -1,4 +1,4 @@
-﻿<div layout="row" flex layout-fill layout-align="center center">
+﻿<div layout="row" flex layout-fill layout-align="center center" id="popupContainer">
     <md-card md-whiteframe="12">
         <md-card-content>
             <form name="gameForm" novalidate>
@@ -10,13 +10,18 @@
                             </div>
                         </md-list-item>
                         <md-list-item>
-                            <div layout="row" layout-fill layout-align="center">
-                                <span>{{vm.playerName}}</span>
+                            <div layout="row" layout-fill layout-align="center" ng-if="vm.isPlayerOneTurn">
+                                <span>{{vm.playerOne.Name}}</span>
+                                <span ng-if="false">{{vm.playerOne.Id}}</span>
+                            </div>
+                            <div layout="row" layout-fill layout-align="center" ng-if="vm.isPlayerTwoTurn">
+                                <span>{{vm.playerTwo.Name}}</span>
+                                <span ng-if="false">{{vm.playerTwo.Id}}</span>
                             </div>
                         </md-list-item>
                         <md-list-item>
                             <md-input-container flex="100">
-                                <label for="playerMove">{{vm.moveLabel}}</label>
+                                <label>{{vm.moveLabel}}</label>
                                 <md-select ng-model="vm.selectedPlayerMove"
                                            ng-required="true"
                                            style="min-width: 135px;">

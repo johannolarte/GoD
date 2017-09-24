@@ -69,6 +69,7 @@
     <Content Include="app\modules\game\game.html" />
     <Content Include="app\modules\game\game.js" />
     <Content Include="app\services\game\gameDataSource-service.js" />
+    <Content Include="app\services\player\playerDataSource-service.js" />
     <Content Include="lib\angular-material\1.1.1\angular-material.min.css" />
     <Content Include="lib\angular-material\1.1.1\angular-material.min.js" />
     <Content Include="packages.config" />

@@ -17,13 +17,13 @@ namespace GoD.WebApi.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetData()
+        public async Task<IHttpActionResult> GetPlayers()
         {
-            return Ok(new { result = "Oe!" });
+            return Ok(await _unitOfWork.Players.GetPlayers());
         }
 
         [HttpPost]
-        public async Task<IHttpActionResult> Create([FromBody] IEnumerable<PlayersViewModel> players)
+        public async Task<IHttpActionResult> CreatePlayers([FromBody] IEnumerable<PlayersViewModel> players)
         {
             await _unitOfWork.Players.CreatePlayers(players);
 

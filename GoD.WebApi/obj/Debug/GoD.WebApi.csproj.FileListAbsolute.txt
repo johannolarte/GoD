@@ -91,8 +91,9 @@ C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\bin\Newtonsoft.Json.xml
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\bin\System.Net.Http.Formatting.xml
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\bin\System.Web.Http.xml
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\bin\System.Web.Http.WebHost.xml
-C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.Migrations.CreatePlayerTable.resources
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.csproj.GenerateResource.Cache
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.dll
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.pdb
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.Migrations.AddActivePropertyToPlayerTable.resources
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.WebApi\obj\Debug\GoD.WebApi.csprojResolveAssemblyReference.cache

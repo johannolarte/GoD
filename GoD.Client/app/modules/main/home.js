@@ -4,13 +4,13 @@
     angular.module('app').controller(controllerId, [
         '$state',
         'Constants',
-        'GameDataSourceService',
+        'PlayerDataSourceService',
         Home])
 
     function Home(
         $state,
         Constants,
-        GameDataSourceService) {
+        PlayerDataSourceService) {
 
         var vm = this
 
@@ -25,7 +25,7 @@
             playersNames.push({ PlayerName: vm.playerOneName })
             playersNames.push({ PlayerName: vm.playerTwoName })
 
-            //GameDataSourceService.savePlayers(playersNames)
+            //PlayerDataSourceService.savePlayers(playersNames)
             //    .then(function (response) {
             //        if (response.status === 200)
             //            $state.go(Constants.ROUTER.stateRound)

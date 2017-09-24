@@ -9,5 +9,7 @@ namespace GoD.WebApi.Core.Models
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
+
+        public bool Active { get; set; }
     }
 }

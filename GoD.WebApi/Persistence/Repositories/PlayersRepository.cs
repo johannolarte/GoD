@@ -3,6 +3,7 @@ using GoD.WebApi.Core.Repositories;
 using GoD.WebApi.Core.ViewModels;
 using GoD.WebApi.Infrastructure.Web;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,6 +20,13 @@ namespace GoD.WebApi.Persistence.Repositories
             .ToList();
 
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Player>> GetPlayers()
+        {
+            return await _context.Players
+                .Where(p => p.Active)
+                .ToListAsync();
         }
     }
 }

@@ -137,16 +137,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
+    <Compile Include="Core\Games\GameService.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Models\Player.cs" />
     <Compile Include="Core\Repositories\IPlayersRepository.cs" />
+    <Compile Include="Core\ViewModels\MovesViewModel.cs" />
     <Compile Include="Core\ViewModels\PlayersViewModel.cs" />
     <Compile Include="Infrastructure\Web\OwinContextBase.cs" />
     <Compile Include="Infrastructure\Web\OwinContextHelper.cs" />
     <Compile Include="Persistence\Migrations\201709232138002_CreatePlayerTable.cs" />
     <Compile Include="Persistence\Migrations\201709232138002_CreatePlayerTable.Designer.cs">
       <DependentUpon>201709232138002_CreatePlayerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201709241332523_AddActivePropertyToPlayerTable.cs" />
+    <Compile Include="Persistence\Migrations\201709241332523_AddActivePropertyToPlayerTable.Designer.cs">
+      <DependentUpon>201709241332523_AddActivePropertyToPlayerTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Persistence\ApplicationContext.cs" />
@@ -169,6 +176,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Persistence\Migrations\201709232138002_CreatePlayerTable.resx">
       <DependentUpon>201709232138002_CreatePlayerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201709241332523_AddActivePropertyToPlayerTable.resx">
+      <DependentUpon>201709241332523_AddActivePropertyToPlayerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
