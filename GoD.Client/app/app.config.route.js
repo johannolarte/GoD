@@ -24,12 +24,12 @@
             }
         })
 
-        .state('app.round', {
-            url: '/round',
+        .state('app.game', {
+            url: '/game',
             views: {
                 'view-content': {
-                    templateUrl: 'app/modules/game/round.html',
-                    controller: 'Round as vm',
+                    templateUrl: 'app/modules/game/Game.html',
+                    controller: 'Game as vm',
                 }
             }
         })

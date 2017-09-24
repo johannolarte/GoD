@@ -144,7 +144,7 @@
         }
 
         var _router = {
-            stateRound: 'app.round',
+            stateRound: 'app.game',
             stateHome: 'app.home',
             urlHome: '/home',
             stateResources: 'app.resources',

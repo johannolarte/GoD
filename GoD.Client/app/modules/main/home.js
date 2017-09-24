@@ -25,11 +25,13 @@
             playersNames.push({ PlayerName: vm.playerOneName })
             playersNames.push({ PlayerName: vm.playerTwoName })
 
-            GameDataSourceService.savePlayers(playersNames)
-                .then(function (response) {
-                    console.log(response)
-                    //$state.go(Constants.ROUTER.stateRound)
-                });
+            //GameDataSourceService.savePlayers(playersNames)
+            //    .then(function (response) {
+            //        if (response.status === 200)
+            //            $state.go(Constants.ROUTER.stateRound)
+            //    });
+
+            $state.go(Constants.ROUTER.stateRound)
         }
     }
 })()

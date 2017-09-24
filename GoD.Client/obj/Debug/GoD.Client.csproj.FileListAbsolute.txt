@@ -18,3 +18,23 @@ c:\Users\johann olarte\documents\visual studio 2015\Projects\GoD\GoD.Client\bin\
 c:\Users\johann olarte\documents\visual studio 2015\Projects\GoD\GoD.Client\obj\Debug\GoD.Client.csprojResolveAssemblyReference.cache
 c:\Users\johann olarte\documents\visual studio 2015\Projects\GoD\GoD.Client\obj\Debug\GoD.Client.dll
 c:\Users\johann olarte\documents\visual studio 2015\Projects\GoD\GoD.Client\obj\Debug\GoD.Client.pdb
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\csc.exe
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\vbc.exe
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\VBCSCompiler.exe
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\GoD.Client.dll.config
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\GoD.Client.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\GoD.Client.pdb
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.csprojResolveAssemblyReference.cache
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.dll
+C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.pdb

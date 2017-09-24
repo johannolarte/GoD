@@ -1,33 +1,51 @@
-﻿<div layout="row" layout-sm="column">
-    <form name="playersForm" novalidate>
-        <p>{{vm.title}}</p>
-        <div class="form-group">
-            <label for="playerOne">{{vm.playerOneLabel}}</label>
-            <input type="text"
-                   class="form-control"
-                   id="playerOne"
-                   placeholder="Player 1 Name"
-                   ng-model="vm.playerOneName"
-                   required>
-
-        </div>
-        <div class="form-group">
-            <label for="playerTwo">{{vm.playerTwoLabel}}</label>
-            <input type="text"
-                   class="form-control"
-                   id="playerTwo"
-                   placeholder="Player 2 Name"
-                   ng-model="vm.playerTwoName"
-                   required>
-        </div>
-        <div layout="row">
-            <button class="btn btn-primary btn-lg"
-                       style="margin-top: 2em"
-                       type="submit"
-                       ng-click="vm.startGame()"
-                       ng-disabled="playersForm.$invalid">
-                Start
-            </button>
-        </div>
-    </form>
+﻿<div layout="row" flex layout-fill layout-align="center center">
+    <md-card md-whiteframe="12">
+        <md-card-content>
+            <form name="playersForm" novalidate>
+                <md-content>
+                    <md-list>
+                        <md-list-item>
+                            <div layout="row" layout-fill layout-align="center">
+                                <h3>{{vm.title}}</h3>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <md-input-container>
+                                <label for="playerOne">{{vm.playerOneLabel}}</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="playerOne"
+                                       ng-model="vm.playerOneName"
+                                       required>
+                            </md-input-container>
+                        </md-list-item>
+                        <md-list-item>
+                            <md-input-container>
+                                <label for="playerTwo">{{vm.playerTwoLabel}}</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="playerTwo"
+                                       ng-model="vm.playerTwoName"
+                                       layout-fill
+                                       required>
+                            </md-input-container>
+                        </md-list-item>
+                        <md-list-item>
+                            <md-input-container layout-fill>
+                                <md-button class="md-raised md-primary"
+                                           layout-fill
+                                           type="submit"
+                                           ng-click="vm.startGame()"
+                                           ng-disabled="playersForm.$invalid">
+                                    Start
+                                </md-button>
+                            </md-input-container>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </form>
+        </md-card-content>
+    </md-card>
 </div>

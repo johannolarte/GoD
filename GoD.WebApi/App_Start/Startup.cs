@@ -1,4 +1,5 @@
-﻿using Owin;
+﻿using GoD.WebApi.Persistence;
+using Owin;
 using System.Web.Http;
 
 namespace GoD.WebApi
@@ -11,9 +12,16 @@ namespace GoD.WebApi
 
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
+            ConfigureOwinContexts(app);
+
             ConfigureWebApi(config);
 
             app.UseWebApi(config);
+        }
+
+        public void ConfigureOwinContexts(IAppBuilder app)
+        {
+            app.CreatePerOwinContext(ApplicationContext.Create);
         }
 
         private void ConfigureWebApi(HttpConfiguration config)

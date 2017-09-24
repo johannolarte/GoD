@@ -9,5 +9,6 @@ var app = angular.module('app', [
     'http-auth-interceptor',
     'services.security',
     'services.common',
-    'services.app'
+    'services.app',
+    'ngMaterial'
 ])

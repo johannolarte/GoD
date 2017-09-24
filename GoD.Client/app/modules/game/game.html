@@ -1,0 +1,47 @@
+﻿<div layout="row" flex layout-fill layout-align="center center">
+    <md-card md-whiteframe="12">
+        <md-card-content>
+            <form name="gameForm" novalidate>
+                <md-content>
+                    <md-list>
+                        <md-list-item>
+                            <div layout="row" layout-fill layout-align="center">
+                                <h3>Round {{vm.roundCounter}}</h3>
+                            </div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div layout="row" layout-fill layout-align="center">
+                                <span>{{vm.playerName}}</span>
+                            </div>
+                        </md-list-item>
+                        <md-list-item>
+                            <md-input-container flex="100">
+                                <label for="playerMove">{{vm.moveLabel}}</label>
+                                <md-select ng-model="vm.selectedPlayerMove"
+                                           ng-required="true"
+                                           style="min-width: 135px;">
+                                    <md-option ng-value="move"
+                                               ng-repeat="move in vm.playerMoves"
+                                               value="{{move.Id}}">
+                                        {{move.Name}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </md-list-item>
+                        <md-list-item>
+                            <md-input-container layout-fill>
+                                <md-button class="md-raised md-primary"
+                                           layout-fill
+                                           type="submit"
+                                           ng-click="vm.selectPlayerMove()"
+                                           ng-disabled="gameForm.$invalid">
+                                    Ok
+                                </md-button>
+                            </md-input-container>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </form>
+        </md-card-content>
+    </md-card>
+</div>
