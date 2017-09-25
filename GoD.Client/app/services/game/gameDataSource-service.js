@@ -17,9 +17,5 @@
         function validateMoves(moves) {
             return $http.post(Constants.API.gamesUrl, moves)
         }
-
-        //function getEmergencyContact(identification) {
-        //    return $http.get(Constants.API.emergencyContactUrlDetail.format(identification))
-        //}
     }
 })()

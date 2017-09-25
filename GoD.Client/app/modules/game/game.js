@@ -19,7 +19,6 @@
         var playersMoves
         var playerOneScore = 0
         var playerTwoScore = 0
-        // Get from the backend
         var moves = [
             { Id: 1, Name: "Rock" },
             { Id: 2, Name: "Paper" },
@@ -44,11 +43,8 @@
             }
 
             if (playersMoves.length === 2) {
-                console.log(playersMoves)
-                // Send to backend
                 GameDataSourceService.validateMoves(playersMoves)
                     .then(function (response) {
-                        console.log(response)
                         if(response.data == vm.playerOne.Name)
                             playerOneScore++
 
@@ -123,8 +119,8 @@
         function getPlayers() {
             PlayerDataSourceService.getPlayers()
                 .then(function (response) {
-                    vm.playerOne = response.data[0]
-                    vm.playerTwo = response.data[1]
+                    vm.playerOne = response.data[1]
+                    vm.playerTwo = response.data[0]
 
                     vm.isPlayerOneTurn = true
                 })

@@ -15,7 +15,8 @@ namespace GoD.WebApi.Persistence.Repositories
         {
             players.Select(player => _context.Players.Add(new Player
             {
-                Name = player.PlayerName
+                Name = player.PlayerName,
+                Active = true
             }))
             .ToList();
 
@@ -26,6 +27,8 @@ namespace GoD.WebApi.Persistence.Repositories
         {
             return await _context.Players
                 .Where(p => p.Active)
+                .OrderByDescending(p => p.Id)
+                .Take(2)
                 .ToListAsync();
         }
     }
