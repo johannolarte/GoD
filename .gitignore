@@ -2,8 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-#
+# 
 /packages
+**/[Bb]in/
+**/[Oo]bj/
+**/*.user
 
 # User-specific files
 *.rsuser
