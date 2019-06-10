@@ -38,3 +38,13 @@ C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\bin\Microsoft.CodeDom.Pro
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.csprojResolveAssemblyReference.cache
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.dll
 C:\Users\Johann Olarte\Documents\GitHub\GoD\GoD.Client\obj\Debug\GoD.Client.pdb
+C:\studyrepo\dotnet\GoD\GoD.Client\bin\GoD.Client.dll.config
+C:\studyrepo\dotnet\GoD\GoD.Client\bin\GoD.Client.dll
+C:\studyrepo\dotnet\GoD\GoD.Client\bin\GoD.Client.pdb
+C:\studyrepo\dotnet\GoD\GoD.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\studyrepo\dotnet\GoD\GoD.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\studyrepo\dotnet\GoD\GoD.Client\obj\Debug\GoD.Client.csprojAssemblyReference.cache
+C:\studyrepo\dotnet\GoD\GoD.Client\obj\Debug\GoD.Client.csproj.CoreCompileInputs.cache
+C:\studyrepo\dotnet\GoD\GoD.Client\obj\Debug\GoD.Client.csproj.CopyComplete
+C:\studyrepo\dotnet\GoD\GoD.Client\obj\Debug\GoD.Client.dll
+C:\studyrepo\dotnet\GoD\GoD.Client\obj\Debug\GoD.Client.pdb
