@@ -348,3 +348,6 @@ healthchecksdb
 
 GoD\.Client/bin/
 GoD\.Client/obj/Debug/
+GoD\.WebApi/bin/
+
+GoD\.WebApi/obj/Debug/
