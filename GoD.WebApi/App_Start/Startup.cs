@@ -1,11 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
-using GoD.WebApi.Core;
-using GoD.WebApi.Core.Repositories;
 using GoD.WebApi.Persistence;
-using GoD.WebApi.Persistence.Repositories;
 using Owin;
-using System.Data.Entity;
+using System;
 using System.Reflection;
 using System.Web.Http;
 
@@ -40,9 +37,9 @@ namespace GoD.WebApi
 
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            builder.RegisterType<ApplicationContext>().As<DbContext>().InstancePerRequest();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
-            builder.RegisterType<PlayersRepository>().As<IPlayersRepository>().InstancePerRequest();
+            builder.RegisterAssemblyTypes(Assembly.Load(Assembly.GetExecutingAssembly().GetName().Name))
+                .AsImplementedInterfaces()
+                .InstancePerRequest();
 
             var container = builder.Build();
 

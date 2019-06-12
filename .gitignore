@@ -351,3 +351,5 @@ GoD\.Client/obj/Debug/
 GoD\.WebApi/bin/
 
 GoD\.WebApi/obj/Debug/
+*.mdf
+*.ldf
