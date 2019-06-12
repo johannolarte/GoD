@@ -1,6 +1,5 @@
 ﻿using GoD.WebApi.Core;
 using GoD.WebApi.Core.ViewModels;
-using GoD.WebApi.Persistence;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -9,11 +8,11 @@ namespace GoD.WebApi.Controllers
 {
     public class PlayersController : ApiController
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public PlayersController()
+        public PlayersController(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = new UnitOfWork();
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
