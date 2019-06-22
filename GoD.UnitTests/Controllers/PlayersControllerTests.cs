@@ -50,8 +50,7 @@ namespace GoD.UnitTests
         {
             // Arrange
             _unitOfWork
-                .Setup(uow => uow.Players.CreatePlayers(It.IsAny<IEnumerable<PlayersViewModel>>()))
-                .Returns(Task.CompletedTask);
+                .Setup(uow => uow.Players.CreatePlayers(It.IsAny<IEnumerable<PlayersViewModel>>()));
 
             var playerList = new List<PlayersViewModel>
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GoD.WebApi.Core.Games
 {
-    public class GameService
+    public static class GameService
     {
         public static string ValidateMoves(IList<MovesViewModel> moves)
         {

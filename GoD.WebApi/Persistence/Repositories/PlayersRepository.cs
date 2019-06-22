@@ -11,16 +11,15 @@ namespace GoD.WebApi.Persistence.Repositories
 {
     public class PlayersRepository : OwinContextBase, IPlayersRepository
     {
-        public async Task CreatePlayers(IEnumerable<PlayersViewModel> players)
+        public void CreatePlayers(IEnumerable<PlayersViewModel> players)
         {
-            players.Select(player => _context.Players.Add(new Player
+            var parsedPlayers = players.Select(p => new Player
             {
-                Name = player.PlayerName,
+                Name = p.PlayerName,
                 Active = true
-            }))
-            .ToList();
+            });
 
-            await _context.SaveChangesAsync();
+            _context.Players.AddRange(parsedPlayers);
         }
 
         public async Task<IEnumerable<Player>> GetPlayers()

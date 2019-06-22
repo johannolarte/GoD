@@ -7,7 +7,7 @@ namespace GoD.WebApi.Core.Repositories
 {
     public interface IPlayersRepository
     {
-        Task CreatePlayers(IEnumerable<PlayersViewModel> players);
+        void CreatePlayers(IEnumerable<PlayersViewModel> players);
         Task<IEnumerable<Player>> GetPlayers();
     }
 }

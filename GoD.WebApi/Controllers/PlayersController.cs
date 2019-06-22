@@ -24,7 +24,9 @@ namespace GoD.WebApi.Controllers
         [HttpPost]
         public async Task<IHttpActionResult> CreatePlayers([FromBody] IEnumerable<PlayersViewModel> players)
         {
-            await _unitOfWork.Players.CreatePlayers(players);
+            _unitOfWork.Players.CreatePlayers(players);
+
+            await _unitOfWork.CompleteTaskAsync();
 
             return Ok();
         }
