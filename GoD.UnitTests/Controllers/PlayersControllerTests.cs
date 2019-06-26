@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http.Results;
 
-namespace GoD.UnitTests
+namespace GoD.UnitTests.Controllers
 {
     [TestFixture]
     public class PlayersControllerTests
@@ -26,7 +26,7 @@ namespace GoD.UnitTests
         [Test]
         public async Task GetPlayers_WhenCalled_ReturnOk()
         {
-            var _player = new Player
+            var player = new Player
             {
                 Id = 1,
                 Name = "A",
@@ -35,7 +35,7 @@ namespace GoD.UnitTests
 
             // Arrange
             _unitOfWork.Setup(uow => uow.Players.GetPlayers())
-                .ReturnsAsync(new List<Player>{ _player });
+                .ReturnsAsync(new List<Player>{ player });
 
             //Act
             var result = await _playersController.GetPlayers();
@@ -62,6 +62,19 @@ namespace GoD.UnitTests
 
             // Act
             var result = await _playersController.CreatePlayers(playerList);
+
+            // Assert
+            Assert.That(result, Is.TypeOf<OkResult>());
+        }
+
+        [Test]
+        public async Task InactivePlayers_WhenCalled_ReturnOk()
+        {
+            // Arrange
+            _unitOfWork.Setup(uow => uow.Players.InactivePlayers()).Returns(Task.CompletedTask);
+
+            // Act
+            var result = await _playersController.InactivePlayers();
 
             // Assert
             Assert.That(result, Is.TypeOf<OkResult>());
