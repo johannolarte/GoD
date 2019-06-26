@@ -9,5 +9,6 @@ namespace GoD.WebApi.Core.Repositories
     {
         void CreatePlayers(IEnumerable<PlayersViewModel> players);
         Task<IEnumerable<Player>> GetPlayers();
+        Task InactivePlayers();
     }
 }

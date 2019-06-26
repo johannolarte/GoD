@@ -14,6 +14,8 @@
 
         var vm = this
 
+        PlayerDataSourceService.inactivePlayers().then();
+
         vm.title = "Enter Player's Names"
 
         vm.playerOneLabel = "Player 1"

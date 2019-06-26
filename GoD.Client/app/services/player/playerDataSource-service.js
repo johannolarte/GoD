@@ -12,7 +12,8 @@
     function PlayerDataSourceService($http, $q, Constants) {
         return {
             savePlayers: savePlayers,
-            getPlayers: getPlayers
+            getPlayers: getPlayers,
+            inactivePlayers: inactivePlayers
         }
 
         function savePlayers(players) {
@@ -21,6 +22,10 @@
 
         function getPlayers() {
             return $http.get(Constants.API.playersUrl)
+        }
+
+        function inactivePlayers() {
+            return $http.get(Constants.API.playersUrl + "/Inactive")
         }
     }
 })()

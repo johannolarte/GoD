@@ -21,6 +21,14 @@ namespace GoD.WebApi.Controllers
             return Ok(await _unitOfWork.Players.GetPlayers());
         }
 
+        [HttpGet]
+        [Route("Players/Inactive")]
+        public async Task<IHttpActionResult> InactivePlayers()
+        {
+            await _unitOfWork.Players.InactivePlayers();
+            return Ok();
+        }
+
         [HttpPost]
         public async Task<IHttpActionResult> CreatePlayers([FromBody] IEnumerable<PlayersViewModel> players)
         {
