@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Controllers\GamesControllerTests.cs" />
     <Compile Include="Controllers\PlayersControllerTests.cs" />
+    <Compile Include="Core\Games\GameServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
