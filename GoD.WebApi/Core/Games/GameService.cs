@@ -18,12 +18,6 @@ namespace GoD.WebApi.Core.Games
 
             switch (playerOne.Move)
             {
-                case "Paper":
-                    if (playerTwo.Move == "Rock")
-                        roundWinner = playerOne.Player.Name;
-                    else
-                        roundWinner = playerTwo.Player.Name;
-                    break;
                 case "Rock":
                     if (playerTwo.Move == "Scissors")
                         roundWinner = playerOne.Player.Name;
@@ -37,6 +31,10 @@ namespace GoD.WebApi.Core.Games
                         roundWinner = playerTwo.Player.Name;
                     break;
                 default:
+                    if (playerTwo.Move == "Rock")
+                        roundWinner = playerOne.Player.Name;
+                    else
+                        roundWinner = playerTwo.Player.Name;
                     break;
             }
 
