@@ -1,4 +1,6 @@
-﻿using GoD.WebApi.Core.ViewModels;
+﻿using GoD.WebApi.Core.Constants;
+using GoD.WebApi.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 
 namespace GoD.WebApi.Core.Games
@@ -9,36 +11,31 @@ namespace GoD.WebApi.Core.Games
         {
             var playerOne = moves[0];
             var playerTwo = moves[1];
-            string roundWinner = "";
 
             if (playerOne.Move == playerTwo.Move)
-            {
-                return "Draw";
-            }
+                return GameServiceConstants.GameDraw;
 
-            switch (playerOne.Move)
+            var playerOneMove = GetEnumPlayerMovement(playerOne.Move);
+            var playerTwoMove = GetEnumPlayerMovement(playerTwo.Move);
+
+            switch (playerOneMove)
             {
-                case "Rock":
-                    if (playerTwo.Move == "Scissors")
-                        roundWinner = playerOne.Player.Name;
-                    else
-                        roundWinner = playerTwo.Player.Name;
-                    break;
-                case "Scissors":
-                    if (playerTwo.Move == "Paper")
-                        roundWinner = playerOne.Player.Name;
-                    else
-                        roundWinner = playerTwo.Player.Name;
-                    break;
+                case PlayerMovements.Rock:
+                    return playerTwoMove == PlayerMovements.Scissors ?
+                        GetPlayerName(playerOne) : GetPlayerName(playerTwo);
+                case PlayerMovements.Scissors:
+                    return playerTwoMove == PlayerMovements.Paper ?
+                        GetPlayerName(playerOne) : GetPlayerName(playerTwo);
                 default:
-                    if (playerTwo.Move == "Rock")
-                        roundWinner = playerOne.Player.Name;
-                    else
-                        roundWinner = playerTwo.Player.Name;
-                    break;
+                    return playerTwoMove == PlayerMovements.Rock ?
+                        GetPlayerName(playerOne) : GetPlayerName(playerTwo);
             }
-
-            return roundWinner;
         }
+
+        private static PlayerMovements GetEnumPlayerMovement(string playerMovement) =>
+            (PlayerMovements)Enum.Parse(typeof(PlayerMovements), playerMovement);
+
+        private static string GetPlayerName(MovesViewModel movesViewModel) =>
+            movesViewModel.Player.Name;
     }
 }

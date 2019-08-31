@@ -20,17 +20,20 @@ namespace GoD.WebApi.Persistence.Repositories
                 Active = true
             });
 
-            _context.Players.AddRange(parsedPlayers);
+            Context.Players.AddRange(parsedPlayers);
         }
 
         public async Task<IEnumerable<Player>> GetPlayers()
         {
-            return await _context.Players
+            return await Context.Players
                 .Where(p => p.Active)
                 .OrderByDescending(p => p.Id)
                 .ToListAsync();
         }
 
-        public async Task InactivePlayers() => await _context.Players.Where(p => p.Active).UpdateAsync(p => new Player { Active = false });
+        public async Task InactivePlayers() =>
+            await Context.Players
+                .Where(p => p.Active)
+                .UpdateAsync(p => new Player { Active = false });
     }
 }

@@ -353,3 +353,5 @@ GoD\.WebApi/bin/
 GoD\.WebApi/obj/Debug/
 *.mdf
 *.ldf
+GoD.WebApi/App_Data/aspnet-GoD.WebApi-20170923162600.mdf
+GoD.WebApi/App_Data/aspnet-GoD.WebApi-20170923162600_log.ldf

@@ -12,7 +12,7 @@ namespace GoD.WebApi.Persistence
 
         public async Task CompleteTaskAsync()
         {
-            await _context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
         }
     }
 }

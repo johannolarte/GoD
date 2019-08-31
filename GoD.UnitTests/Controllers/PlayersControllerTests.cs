@@ -1,5 +1,6 @@
 ﻿using GoD.WebApi.Controllers;
 using GoD.WebApi.Core;
+using GoD.WebApi.Core.Dto;
 using GoD.WebApi.Core.Models;
 using GoD.WebApi.Core.ViewModels;
 using Moq;
@@ -15,6 +16,7 @@ namespace GoD.UnitTests.Controllers
     {
         private Mock<IUnitOfWork> _unitOfWork;
         private PlayersController _playersController;
+        private const string PlayerName = "Jon Snow";
 
         [SetUp]
         public void SetUp()
@@ -29,7 +31,7 @@ namespace GoD.UnitTests.Controllers
             var player = new Player
             {
                 Id = 1,
-                Name = "A",
+                Name = PlayerName,
                 Active = true
             };
 
@@ -42,7 +44,7 @@ namespace GoD.UnitTests.Controllers
 
             // Assert
             Assert.That(result, Is.Not.Null);
-            Assert.That(result, Is.TypeOf<OkNegotiatedContentResult<IEnumerable<Player>>>());
+            Assert.That(result, Is.TypeOf<OkNegotiatedContentResult<IEnumerable<PlayerDto>>>());
         }
 
         [Test]
@@ -56,7 +58,7 @@ namespace GoD.UnitTests.Controllers
             {
                 new PlayersViewModel
                 {
-                    PlayerName = "Jon Snow"
+                    PlayerName = PlayerName
                 }
             };
 

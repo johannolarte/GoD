@@ -4,6 +4,6 @@ namespace GoD.WebApi.Infrastructure.Web
 {
     public class OwinContextBase
     {
-        protected ApplicationContext _context => OwinContextHelper.GetContext();
+        protected ApplicationContext Context => OwinContextHelper.GetContext();
     }
 }

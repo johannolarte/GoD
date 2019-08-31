@@ -1,5 +1,5 @@
 ﻿using GoD.WebApi.Controllers;
-using GoD.WebApi.Core.Models;
+using GoD.WebApi.Core.Dto;
 using GoD.WebApi.Core.ViewModels;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -10,16 +10,19 @@ namespace GoD.UnitTests.Controllers
     [TestFixture]
     public class GamesControllerTests
     {
-        [Test]
-        public void ValidateMoves_WhenCalled_ReturnOk()
+        private GamesController _gamesController;
+        private List<MovesViewModel> _playersMoves;
+
+        [SetUp]
+        public void SetUp()
         {
-            // Arrange
-            var playersMoves = new List<MovesViewModel>
+            _gamesController = new GamesController();
+            _playersMoves = new List<MovesViewModel>
             {
                 new MovesViewModel
                 {
                     Move = "Paper",
-                    Player = new Player
+                    Player = new PlayerDto
                     {
                         Id = 17,
                         Name = "Victor",
@@ -29,7 +32,7 @@ namespace GoD.UnitTests.Controllers
                 new MovesViewModel
                 {
                     Move = "Scissors",
-                    Player = new Player
+                    Player = new PlayerDto
                     {
                         Id = 18,
                         Name = "Michael",
@@ -37,11 +40,19 @@ namespace GoD.UnitTests.Controllers
                     }
                 }
             };
+        }
 
-            var gamesController = new GamesController();
+        [TearDown]
+        public void Dispose()
+        {
+            _gamesController.Dispose();
+        }
 
+        [Test]
+        public void ValidateMoves_WhenCalled_ReturnOk()
+        {
             // Act
-            var result = gamesController.ValidateMoves(playersMoves);
+            var result = _gamesController.ValidateMoves(_playersMoves);
 
             // Result
             Assert.That(result, Is.Not.Null);

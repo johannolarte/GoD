@@ -1,10 +1,10 @@
-﻿using GoD.WebApi.Core.Models;
+﻿using GoD.WebApi.Core.Dto;
 
 namespace GoD.WebApi.Core.ViewModels
 {
     public class MovesViewModel
     {
         public string Move { get; set; }
-        public Player Player { get; set; }
+        public PlayerDto Player { get; set; }
     }
 }

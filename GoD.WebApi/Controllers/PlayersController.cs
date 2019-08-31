@@ -1,4 +1,5 @@
 ﻿using GoD.WebApi.Core;
+using GoD.WebApi.Core.Players;
 using GoD.WebApi.Core.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace GoD.WebApi.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetPlayers()
         {
-            return Ok(await _unitOfWork.Players.GetPlayers());
+            return Ok(PlayersService.GetPlayers(await _unitOfWork.Players.GetPlayers()));
         }
 
         [HttpGet]
