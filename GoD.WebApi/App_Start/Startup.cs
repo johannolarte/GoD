@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
-using AutoMapper;
 using GoD.WebApi.Persistence;
 using Owin;
 using System.Reflection;
@@ -21,10 +20,6 @@ namespace GoD.WebApi
             ConfigureWebApi(config);
 
             app.UseAutofacMiddleware(ConfigureDependencyInjection(config));
-
-            var mapperConfiguration = new MapperConfiguration(c =>
-                c.AddProfile(new MappingProfile()));
-            var mapper = mapperConfiguration.CreateMapper();
 
             app.UseAutofacWebApi(config);
             app.UseWebApi(config);

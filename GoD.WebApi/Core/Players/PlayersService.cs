@@ -9,7 +9,6 @@ namespace GoD.WebApi.Core.Players
     {
         public static IEnumerable<PlayerDto> GetPlayers(IEnumerable<Player> players)
         {
-            // ToDo: Apply AutoMapper here!!!
             return players.Select(player =>
                 new PlayerDto
                 {
